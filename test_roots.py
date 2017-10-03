@@ -3,6 +3,9 @@ import roots
 def test_quadroots_result():
     assert roots.quad_roots(1.0, 1.0, -12.0) == ((3+0j), (-4+0j))
 
+def test_quadroots_imagresult():
+    assert roots.quad_roots(1.0, 0.0, 1.0) == ((0+1j), (0-1j))
+
 def test_quadroots_types():
     try:
         roots.quad_roots("", "green", "hi")
